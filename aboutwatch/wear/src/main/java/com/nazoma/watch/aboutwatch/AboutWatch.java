@@ -206,20 +206,20 @@ public class AboutWatch extends CanvasWatchFaceService {
             String text = "";
             int minute = _time.minute;
             if (minute == 0) {
-                text = String.format("%d ", _time.hour) + "丁度";
+                text = String.format("%d ", _time.hour) + "정각";
             } else if (minute < 5 && minute > 0) {
-                text = String.format("%d ", _time.hour) + "前後";
+                text = String.format("%d ", _time.hour) + "전후";
             } else if (minute >= 5 && minute < 25) {
-                text = String.format("%d ", _time.hour) + "前半";
+                text = String.format("%d ", _time.hour) + "전반";
             } else if (minute >= 25 && minute < 35) {
-                text = String.format("%d ", _time.hour) + "半頃";
+                text = String.format("%d ", _time.hour) + "반쯤";
             } else if (minute >= 35 && minute < 55) {
-                text = String.format("%d ", _time.hour) + "後半";
+                text = String.format("%d ", _time.hour) + "후반";
             } else if (minute >= 55 && minute <= 59) {
                 int hour = _time.hour;
                 if (hour == 23) hour = 0;
                 else hour += 1;
-                text = String.format("%d ", hour) + "前後";
+                text = String.format("%d ", hour) + "전후";
             }
             return text;
         }
